@@ -14,9 +14,9 @@
 - قاعدة بيانات SQL وفهارس.
 
 طريقة الإعداد:
-1) أنشئ Cloudflare D1 database باسم restaurant-cafe-pos-db.
-2) استبدل REPLACE_WITH_YOUR_D1_DATABASE_ID في wrangler.toml بمعرّف قاعدة البيانات الحقيقي.
-3) من مجلد المشروع شغّل:
+1) أنشئ قاعدة Cloudflare D1 جديدة باسم restaurant-cafe-pos-db؛ لا تستخدم قاعدة eldab3awy-db القديمة.
+2) استبدل REPLACE_WITH_YOUR_NEW_D1_DATABASE_ID في wrangler.jsonc بمعرّف قاعدة المطاعم الجديدة.
+3) اربط قاعدة المطاعم الجديدة بالإعدادات، ثم نفّذ من مجلد المشروع:
    npx wrangler d1 execute restaurant-cafe-pos-db --remote --file=./schema.sql
 4) ثبّت Wrangler إذا لزم:
    npm install -D wrangler
